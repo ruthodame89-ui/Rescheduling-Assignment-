@@ -1,0 +1,21 @@
+flowchart LR
+P[Patient]
+AS[Appointment System]
+DD[Database]
+NS[Notification Service]
+
+
+P ----> [Rescheduling Appointment Request] -----> AS
+
+AS ----> [Appointment Rescheduled Event] -----> NS
+
+AS ----> [ Late change flag Rescheduling] -----> DD
+
+AS ----> [ Appointment Rescheduled Event ] -----> NS
+
+AS ----> [ Appointment Details ] -----> DD
+
+AS -----> [Appointment Confirmation + Details] -----> P
+
+
+ 
